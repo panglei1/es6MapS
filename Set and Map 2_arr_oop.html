@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>Set and Map</title>
+    <script></script>
+</head>
+<body>
+<script>
+
+// 例三数组对象
+function divs () {
+    return [...document.querySelectorAll('div')];
+}
+const set = new Set(divs());
+set.size; // 56
+
+// 类似于
+divs().forEach(div => set.add(div));
+set.size // 56
+
+//Set Same-value equality
+
+let set = new Set();
+let a = NaN;
+let b = NaN;
+set.add(a);
+set.add(b);
+set // Set {NaN}
+//上面代码向 Set 实例添加了两个NaN，但是只能加入一个。这表明，在 Set 内部，两个NaN是相等。
+let set = new Set();
+
+set.add({});
+set.size // 1
+
+set.add({});
+set.size // 2
+
+//两个空对象不相等，所以它们被视为两个值
+
+
+</script>
+</body>
+</html>

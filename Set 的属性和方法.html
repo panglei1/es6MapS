@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>Set and Map</title>
+    <h1> Set 结构的实例有以下属性。</h1>
+        <h4>Set.prototype.constructor：构造函数，默认就是Set函数。</h4>
+        <h4>Set.prototype.size：返回Set实例的成员总数。</h4>
+    <h3>Set 实例的方法分为两大类：操作方法（用于操作数据）和遍历方法（用于遍历成员）。下面先介绍四个操作方法。</h3>
+
+     <h4>add(value)：添加某个值，返回Set结构本身。</h4>
+     <h4>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。</h4>
+     <h4>has(value)：返回一个布尔值，表示该值是否为Set的成员。</h4>
+     <h4>clear()：清除所有成员，没有返回值。</h4>
+         <ol>
+             <li>
+                 s.add(1).add(2).add(2);
+                 // 注意2被加入了两次
+                 s.size // 2
+             </li>
+             <li>
+                 s.has(1) // true
+                 s.has(2) // true
+                 s.has(3) // false
+
+             </li>
+             <li>
+                 s.delete(2);
+                 s.has(2) // false
+
+             </li>
+         </ol>
+             <div style="background:skyblue;color:red;">需要特别指出的是，Set的遍历顺序就是插入顺序。这个特性有时非常有用，比如使用Set保存一个回调函数列表，调用时就能保证按照添加顺序调用。</div>
+    <pre>
+         keys方法、values方法、entries方法返回的都是遍历器对象（详见《Iterator 对象》一章）。由于 Set 结构没有键名，
+         只有键值（或者说键名和键值是同一个值），所以keys方法和values方法的行为完全一致。
+    </pre>
+
+
+
+    <h4>下面是一个对比，看看在判断是否包括一个键上面，Object结构和Set结构的写法不同。</h4>
+
+</head>
+<body>
+<script>
+
+
+</script>
+</body>
+</html>
